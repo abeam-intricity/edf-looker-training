@@ -1,5 +1,5 @@
 view: inventory {
-  sql_table_name: TPCDS_SF100TCL.INVENTORY ;;
+  sql_table_name: SNOWFLAKE_SAMPLE_DATA_PROD.TPCDS_SF100TCL.INVENTORY ;;
 
   dimension: inv_date_sk {
     type: number

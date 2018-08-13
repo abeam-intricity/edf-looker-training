@@ -1,5 +1,5 @@
 view: warehouse {
-  sql_table_name: TPCDS_SF100TCL.WAREHOUSE ;;
+  sql_table_name: SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WAREHOUSE ;;
 
   dimension: w_warehouse_id {
     primary_key: yes

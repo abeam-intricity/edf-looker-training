@@ -3,17 +3,15 @@ connection: "edf_snowflake"
 include: "*.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project
 
-# # Select the views that should be a part of this model,
-# # and define the joins that connect them together.
-#
-# explore: order_items {
-#   join: orders {
-#     relationship: many_to_one
-#     sql_on: ${orders.id} = ${order_items.order_id} ;;
-#   }
-#
-#   join: users {
-#     relationship: many_to_one
-#     sql_on: ${users.id} = ${orders.user_id} ;;
-#   }
-# }
+explore: inventory {
+  join: warehouse {
+    relationship: many_to_one
+    sql_on: ${inventory.inv_warehouse_sk} = ${warehouse.w_warehouse_sk} ;;
+  }
+  join: item {
+    relationship: many_to_one
+    sql_on: ${inventory.inv_item_sk} = ${item.i_item_sk} ;;
+  }
+}
+
+explore: date_dim {}

@@ -1,5 +1,5 @@
 view: item {
-  sql_table_name: TPCDS_SF100TCL.ITEM ;;
+  sql_table_name: SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.ITEM ;;
 
   dimension: i_item_id {
     primary_key: yes
